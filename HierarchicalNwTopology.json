@@ -20,7 +20,7 @@
     ]
   },
   {
-    "name": "firesesc.nw.ROUTER",
+    "name": "nw.ROUTER",
     "imports": [
       "rtr.ORG-RTR-01"
     ]
