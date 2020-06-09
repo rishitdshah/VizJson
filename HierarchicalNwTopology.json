@@ -8,36 +8,36 @@
     ]
   },
   {
-    "name": "firesesc.nw.FIREWALL",
+    "name": "nw.FIREWALL",
     "imports": [
-      "fw.FW-01"
+      "fw.ORG-FW-01"
     ]
   },
   {
-    "name": "firesesc.nw.SWITCH",
+    "name": "nw.SWITCH",
     "imports": [
-      "swt.SWT-01"
+      "swt.ORG-SWT-01"
     ]
   },
   {
     "name": "firesesc.nw.ROUTER",
     "imports": [
-      "rtr.RTR-01"
+      "rtr.ORG-RTR-01"
     ]
   },
   {
-    "name": "fw.FW-01",
+    "name": "fw.ORG-FW-01",
     "imports": [
-      "nw.fw.FW-01.INTERFACES",
-      "nw.fw.FW-01.ZONES",
-      "nw.fw.FW-01.SERVERS",
-      "nw.fw.FW-01.ENDPOINTS",
-      "nw.fw.FW-01.APPS",
-      "nw.fw.FW-01.PORTS"
+      "nw.fw.ORG-FW-01.INTERFACES",
+      "nw.fw.ORG-FW-01.ZONES",
+      "nw.fw.ORG-FW-01.SERVERS",
+      "nw.fw.ORG-FW-01.ENDPOINTS",
+      "nw.fw.ORG-FW-01.APPS",
+      "nw.fw.ORG-FW-01.PORTS"
     ]
   },
   {
-    "name": "nw.fw.FW-01.INTERFACES",
+    "name": "nw.fw.ORG-FW-01.INTERFACES",
     "imports": [
       "nw.fw.interfaces.GigabitEthernet0/0",
       "nw.fw.interfaces.GigabitEthernet0/1",
@@ -82,7 +82,7 @@
 	]
   },
   {
-    "name": "nw.fw.FW-01.ZONES",
+    "name": "nw.fw.ORG-FW-01.ZONES",
     "imports": [
       "nw.fw.zones.DMZ",
       "nw.fw.zones.WAN",
@@ -110,8 +110,8 @@
     "name": "nw.fw.zones.LAN",
     "imports": [
 		"nw.fw.servers.DEV-SRV1",
-		"nw.fw.endpoints.LT-01",
-		"nw.fw.endpoints.LT-02",
+		"nw.fw.endpoints.ORG-LT-01",
+		"nw.fw.endpoints.ORG-LT-02",
 		"nw.fw.zones.DMZ"
 	]
   },
@@ -127,7 +127,7 @@
     "imports": []
   },
   {
-    "name": "nw.fw.FW-01.SERVERS",
+    "name": "nw.fw.ORG-FW-01.SERVERS",
     "imports": [
       "nw.fw.servers.PROD-SRV1",
       "nw.fw.servers.PROD-SRV2",
@@ -162,22 +162,22 @@
     "imports": []
   },
   {
-    "name": "nw.fw.FW-01.ENDPOINTS",
+    "name": "nw.fw.ORG-FW-01.ENDPOINTS",
     "imports": [
-      "nw.fw.endpoints.LT-01",
-      "nw.fw.endpoints.LT-02"
+      "nw.fw.endpoints.ORG-LT-01",
+      "nw.fw.endpoints.ORG-LT-02"
     ]
   },
   {
-    "name": "nw.fw.endpoints.LT-01",
+    "name": "nw.fw.endpoints.ORG-LT-01",
     "imports": []
   },
   {
-    "name": "nw.fw.endpoints.LT-02",
+    "name": "nw.fw.endpoints.ORG-LT-02",
     "imports": []
   },
   {
-    "name": "nw.fw.FW-01.APPS",
+    "name": "nw.fw.ORG-FW-01.APPS",
     "imports": [
       "nw.fw.apps.fb",
       "nw.fw.apps.google"
@@ -192,7 +192,7 @@
     "imports": []
   },
   {
-    "name": "nw.fw.FW-01.PORTS",
+    "name": "nw.fw.ORG-FW-01.PORTS",
     "imports": [
       "nw.fw.ports.HTTP",
       "nw.fw.ports.HTTPS",
@@ -211,8 +211,8 @@
 		"nw.fw.servers.TEST-SRV1",
 		"nw.fw.servers.TEST-SRV2",
 		"nw.fw.servers.DEV-SRV1",
-		"nw.fw.endpoints.LT-01",
-		"nw.fw.endpoints.LT-02"
+		"nw.fw.endpoints.ORG-LT-01",
+		"nw.fw.endpoints.ORG-LT-02"
 	]
   },
   {
@@ -224,8 +224,8 @@
 		"nw.fw.servers.TEST-SRV1",
 		"nw.fw.servers.TEST-SRV2",
 		"nw.fw.servers.DEV-SRV1",
-		"nw.fw.endpoints.LT-01",
-		"nw.fw.endpoints.LT-02"
+		"nw.fw.endpoints.ORG-LT-01",
+		"nw.fw.endpoints.ORG-LT-02"
 	]
   },
   {
@@ -237,8 +237,8 @@
 		"nw.fw.servers.TEST-SRV1",
 		"nw.fw.servers.TEST-SRV2",
 		"nw.fw.servers.DEV-SRV1",
-		"nw.fw.endpoints.LT-01",
-		"nw.fw.endpoints.LT-02"
+		"nw.fw.endpoints.ORG-LT-01",
+		"nw.fw.endpoints.ORG-LT-02"
 	]
   },
   {
@@ -247,8 +247,8 @@
 		"nw.fw.servers.TEST-SRV1",
 		"nw.fw.servers.TEST-SRV2",
 		"nw.fw.servers.DEV-SRV1",
-		"nw.fw.endpoints.LT-01",
-		"nw.fw.endpoints.LT-02"
+		"nw.fw.endpoints.ORG-LT-01",
+		"nw.fw.endpoints.ORG-LT-02"
 	]
   },
   {
@@ -257,8 +257,8 @@
 		"nw.fw.servers.TEST-SRV1",
 		"nw.fw.servers.TEST-SRV2",
 		"nw.fw.servers.DEV-SRV1",
-		"nw.fw.endpoints.LT-01",
-		"nw.fw.endpoints.LT-02"
+		"nw.fw.endpoints.ORG-LT-01",
+		"nw.fw.endpoints.ORG-LT-02"
 	]
   },
   {
@@ -267,8 +267,8 @@
 		"nw.fw.servers.TEST-SRV1",
 		"nw.fw.servers.TEST-SRV2",
 		"nw.fw.servers.DEV-SRV1",
-		"nw.fw.endpoints.LT-01",
-		"nw.fw.endpoints.LT-02"
+		"nw.fw.endpoints.ORG-LT-01",
+		"nw.fw.endpoints.ORG-LT-02"
 	]
   },
   {
@@ -277,8 +277,8 @@
 		"nw.fw.servers.TEST-SRV1",
 		"nw.fw.servers.TEST-SRV2",
 		"nw.fw.servers.DEV-SRV1",
-		"nw.fw.endpoints.LT-01",
-		"nw.fw.endpoints.LT-02"
+		"nw.fw.endpoints.ORG-LT-01",
+		"nw.fw.endpoints.ORG-LT-02"
 	]
   },
   {
@@ -287,8 +287,8 @@
 		"nw.fw.servers.TEST-SRV1",
 		"nw.fw.servers.TEST-SRV2",
 		"nw.fw.servers.DEV-SRV1",
-		"nw.fw.endpoints.LT-01",
-		"nw.fw.endpoints.LT-02"
+		"nw.fw.endpoints.ORG-LT-01",
+		"nw.fw.endpoints.ORG-LT-02"
 	]
   },
   {
@@ -297,16 +297,16 @@
 		"nw.fw.servers.TEST-SRV1",
 		"nw.fw.servers.TEST-SRV2",
 		"nw.fw.servers.DEV-SRV1",
-		"nw.fw.endpoints.LT-01",
-		"nw.fw.endpoints.LT-02"
+		"nw.fw.endpoints.ORG-LT-01",
+		"nw.fw.endpoints.ORG-LT-02"
 	]
   },
     {
-    "name": "swt.SWT-01",
+    "name": "swt.ORG-SWT-01",
     "imports": []
   },
   {
-    "name": "rtr.RTR-01",
+    "name": "rtr.ORG-RTR-01",
     "imports": []
   }
 ]
