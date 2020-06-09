@@ -1,312 +1,312 @@
 [
   {
-    "name": "firesesc.nw.-NETWORK DEVICES-",
+    "name": "nw.-NETWORK DEVICES-",
     "imports": [
-      "firesec.nw.FIREWALL",
-      "firesec.nw.SWITCH",
-      "firesec.nw.ROUTER"
+      "nw.FIREWALL",
+      "nw.SWITCH",
+      "nw.ROUTER"
     ]
   },
   {
     "name": "firesesc.nw.FIREWALL",
     "imports": [
-      "firesec.fw.FW-01"
+      "fw.FW-01"
     ]
   },
   {
     "name": "firesesc.nw.SWITCH",
     "imports": [
-      "firesec.swt.SWT-01"
+      "swt.SWT-01"
     ]
   },
   {
     "name": "firesesc.nw.ROUTER",
     "imports": [
-      "firesec.rtr.RTR-01"
+      "rtr.RTR-01"
     ]
   },
   {
-    "name": "firesec.fw.FW-01",
+    "name": "fw.FW-01",
     "imports": [
-      "firesec.nw.fw.FW-01.INTERFACES",
-      "firesec.nw.fw.FW-01.ZONES",
-      "firesec.nw.fw.FW-01.SERVERS",
-      "firesec.nw.fw.FW-01.ENDPOINTS",
-      "firesec.nw.fw.FW-01.APPS",
-      "firesec.nw.fw.FW-01.PORTS"
+      "nw.fw.FW-01.INTERFACES",
+      "nw.fw.FW-01.ZONES",
+      "nw.fw.FW-01.SERVERS",
+      "nw.fw.FW-01.ENDPOINTS",
+      "nw.fw.FW-01.APPS",
+      "nw.fw.FW-01.PORTS"
     ]
   },
   {
-    "name": "firesec.nw.fw.FW-01.INTERFACES",
+    "name": "nw.fw.FW-01.INTERFACES",
     "imports": [
-      "firesec.nw.fw.interfaces.GigabitEthernet0/0",
-      "firesec.nw.fw.interfaces.GigabitEthernet0/1",
-      "firesec.nw.fw.interfaces.GigabitEthernet0/2",
-      "firesec.nw.fw.interfaces.GigabitEthernet0/3",
-      "firesec.nw.fw.interfaces.GigabitEthernet0/4",
-      "firesec.nw.fw.interfaces.Management0/0"
+      "nw.fw.interfaces.GigabitEthernet0/0",
+      "nw.fw.interfaces.GigabitEthernet0/1",
+      "nw.fw.interfaces.GigabitEthernet0/2",
+      "nw.fw.interfaces.GigabitEthernet0/3",
+      "nw.fw.interfaces.GigabitEthernet0/4",
+      "nw.fw.interfaces.Management0/0"
     ]
   },
   {
-    "name": "firesec.nw.fw.interfaces.GigabitEthernet0/0",
+    "name": "nw.fw.interfaces.GigabitEthernet0/0",
     "imports": [
-		"firesec.nw.fw.zones.WAN"
+		"nw.fw.zones.WAN"
 	]
   },
   {
-    "name": "firesec.nw.fw.interfaces.GigabitEthernet0/1",
+    "name": "nw.fw.interfaces.GigabitEthernet0/1",
     "imports": [
-		"firesec.nw.fw.zones.DMZ"
+		"nw.fw.zones.DMZ"
 	]
   },
   {
-    "name": "firesec.nw.fw.interfaces.GigabitEthernet0/2",
+    "name": "nw.fw.interfaces.GigabitEthernet0/2",
     "imports": [
-		"firesec.nw.fw.zones.EXTERNAL"
+		"nw.fw.zones.EXTERNAL"
 	]
   },
   {
-    "name": "firesec.nw.fw.interfaces.GigabitEthernet0/3",
+    "name": "nw.fw.interfaces.GigabitEthernet0/3",
     "imports": [
-		"firesec.nw.fw.zones.LAN"
+		"nw.fw.zones.LAN"
 	]
   },
   {
-    "name": "firesec.nw.fw.interfaces.GigabitEthernet0/4",
+    "name": "nw.fw.interfaces.GigabitEthernet0/4",
     "imports": []
   },
   {
-    "name": "firesec.nw.fw.interfaces.Management0/0",
+    "name": "nw.fw.interfaces.Management0/0",
     "imports": [
-		"firesec.nw.fw.zones.INTERNAL"
+		"nw.fw.zones.INTERNAL"
 	]
   },
   {
-    "name": "firesec.nw.fw.FW-01.ZONES",
+    "name": "nw.fw.FW-01.ZONES",
     "imports": [
-      "firesec.nw.fw.zones.DMZ",
-      "firesec.nw.fw.zones.WAN",
-      "firesec.nw.fw.zones.LAN",
-      "firesec.nw.fw.zones.INTERNAL",
-      "firesec.nw.fw.zones.EXTERNAL"
+      "nw.fw.zones.DMZ",
+      "nw.fw.zones.WAN",
+      "nw.fw.zones.LAN",
+      "nw.fw.zones.INTERNAL",
+      "nw.fw.zones.EXTERNAL"
     ]
   },
   {
-    "name": "firesec.nw.fw.zones.DMZ",
+    "name": "nw.fw.zones.DMZ",
     "imports": [
-	    "firesec.nw.fw.servers.PROD-SRV1",
-		"firesec.nw.fw.servers.PROD-SRV2",
-		"firesec.nw.fw.servers.PROD-SRV3",
-		"firesec.nw.fw.zones.WAN"
+	    "nw.fw.servers.PROD-SRV1",
+		"nw.fw.servers.PROD-SRV2",
+		"nw.fw.servers.PROD-SRV3",
+		"nw.fw.zones.WAN"
 	]
   },
   {
-    "name": "firesec.nw.fw.zones.WAN",
+    "name": "nw.fw.zones.WAN",
     "imports": [
-		"firesec.nw.fw.zones.LAN"
+		"nw.fw.zones.LAN"
 		]
   },
   {
-    "name": "firesec.nw.fw.zones.LAN",
+    "name": "nw.fw.zones.LAN",
     "imports": [
-		"firesec.nw.fw.servers.DEV-SRV1",
-		"firesec.nw.fw.endpoints.LT-01",
-		"firesec.nw.fw.endpoints.LT-02",
-		"firesec.nw.fw.zones.DMZ"
+		"nw.fw.servers.DEV-SRV1",
+		"nw.fw.endpoints.LT-01",
+		"nw.fw.endpoints.LT-02",
+		"nw.fw.zones.DMZ"
 	]
   },
   {
-    "name": "firesec.nw.fw.zones.INTERNAL",
+    "name": "nw.fw.zones.INTERNAL",
     "imports": [
-		"firesec.nw.fw.servers.TEST-SRV1",
-		"firesec.nw.fw.servers.TEST-SRV2"
+		"nw.fw.servers.TEST-SRV1",
+		"nw.fw.servers.TEST-SRV2"
 	]
   },
   {
-    "name": "firesec.nw.fw.zones.EXTERNAL",
+    "name": "nw.fw.zones.EXTERNAL",
     "imports": []
   },
   {
-    "name": "firesec.nw.fw.FW-01.SERVERS",
+    "name": "nw.fw.FW-01.SERVERS",
     "imports": [
-      "firesec.nw.fw.servers.PROD-SRV1",
-      "firesec.nw.fw.servers.PROD-SRV2",
-      "firesec.nw.fw.servers.PROD-SRV3",
-      "firesec.nw.fw.servers.TEST-SRV1",
-      "firesec.nw.fw.servers.TEST-SRV2",
-      "firesec.nw.fw.servers.DEV-SRV1"
+      "nw.fw.servers.PROD-SRV1",
+      "nw.fw.servers.PROD-SRV2",
+      "nw.fw.servers.PROD-SRV3",
+      "nw.fw.servers.TEST-SRV1",
+      "nw.fw.servers.TEST-SRV2",
+      "nw.fw.servers.DEV-SRV1"
     ]
   },
   {
-    "name": "firesec.nw.fw.servers.PROD-SRV1",
+    "name": "nw.fw.servers.PROD-SRV1",
     "imports": []
   },
   {
-    "name": "firesec.nw.fw.servers.PROD-SRV2",
+    "name": "nw.fw.servers.PROD-SRV2",
     "imports": []
   },
   {
-    "name": "firesec.nw.fw.servers.PROD-SRV3",
+    "name": "nw.fw.servers.PROD-SRV3",
     "imports": []
   },
   {
-    "name": "firesec.nw.fw.servers.TEST-SRV1",
+    "name": "nw.fw.servers.TEST-SRV1",
     "imports": []
   },
   {
-    "name": "firesec.nw.fw.servers.TEST-SRV2",
+    "name": "nw.fw.servers.TEST-SRV2",
     "imports": []
   },
   {
-    "name": "firesec.nw.fw.servers.DEV-SRV1",
+    "name": "nw.fw.servers.DEV-SRV1",
     "imports": []
   },
   {
-    "name": "firesec.nw.fw.FW-01.ENDPOINTS",
+    "name": "nw.fw.FW-01.ENDPOINTS",
     "imports": [
-      "firesec.nw.fw.endpoints.LT-01",
-      "firesec.nw.fw.endpoints.LT-02"
+      "nw.fw.endpoints.LT-01",
+      "nw.fw.endpoints.LT-02"
     ]
   },
   {
-    "name": "firesec.nw.fw.endpoints.LT-01",
+    "name": "nw.fw.endpoints.LT-01",
     "imports": []
   },
   {
-    "name": "firesec.nw.fw.endpoints.LT-02",
+    "name": "nw.fw.endpoints.LT-02",
     "imports": []
   },
   {
-    "name": "firesec.nw.fw.FW-01.APPS",
+    "name": "nw.fw.FW-01.APPS",
     "imports": [
-      "firesec.nw.fw.apps.fb",
-      "firesec.nw.fw.apps.google"
+      "nw.fw.apps.fb",
+      "nw.fw.apps.google"
     ]
   },
   {
-    "name": "firesec.nw.fw.apps.fb",
+    "name": "nw.fw.apps.fb",
     "imports": []
   },
   {
-    "name": "firesec.nw.fw.apps.google",
+    "name": "nw.fw.apps.google",
     "imports": []
   },
   {
-    "name": "firesec.nw.fw.FW-01.PORTS",
+    "name": "nw.fw.FW-01.PORTS",
     "imports": [
-      "firesec.nw.fw.ports.HTTP",
-      "firesec.nw.fw.ports.HTTPS",
-      "firesec.nw.fw.ports.SSH",
-	  "firesec.nw.fw.ports.FTP",
-	  "firesec.nw.fw.ports.SFTP",
-	  "firesec.nw.fw.ports.SMTP",
-	  "firesec.nw.fw.ports.TELNET",
-	  "firesec.nw.fw.ports.SNMP",
-	  "firesec.nw.fw.ports.NTP"
+      "nw.fw.ports.HTTP",
+      "nw.fw.ports.HTTPS",
+      "nw.fw.ports.SSH",
+	  "nw.fw.ports.FTP",
+	  "nw.fw.ports.SFTP",
+	  "nw.fw.ports.SMTP",
+	  "nw.fw.ports.TELNET",
+	  "nw.fw.ports.SNMP",
+	  "nw.fw.ports.NTP"
     ]
   },
   {
-    "name": "firesec.nw.fw.ports.HTTP",
+    "name": "nw.fw.ports.HTTP",
     "imports": [
-		"firesec.nw.fw.servers.TEST-SRV1",
-		"firesec.nw.fw.servers.TEST-SRV2",
-		"firesec.nw.fw.servers.DEV-SRV1",
-		"firesec.nw.fw.endpoints.LT-01",
-		"firesec.nw.fw.endpoints.LT-02"
+		"nw.fw.servers.TEST-SRV1",
+		"nw.fw.servers.TEST-SRV2",
+		"nw.fw.servers.DEV-SRV1",
+		"nw.fw.endpoints.LT-01",
+		"nw.fw.endpoints.LT-02"
 	]
   },
   {
-    "name": "firesec.nw.fw.ports.HTTPS",
+    "name": "nw.fw.ports.HTTPS",
     "imports": [
-		"firesec.nw.fw.servers.PROD-SRV1",
-		"firesec.nw.fw.servers.PROD-SRV2",
-		"firesec.nw.fw.servers.PROD-SRV3",
-		"firesec.nw.fw.servers.TEST-SRV1",
-		"firesec.nw.fw.servers.TEST-SRV2",
-		"firesec.nw.fw.servers.DEV-SRV1",
-		"firesec.nw.fw.endpoints.LT-01",
-		"firesec.nw.fw.endpoints.LT-02"
+		"nw.fw.servers.PROD-SRV1",
+		"nw.fw.servers.PROD-SRV2",
+		"nw.fw.servers.PROD-SRV3",
+		"nw.fw.servers.TEST-SRV1",
+		"nw.fw.servers.TEST-SRV2",
+		"nw.fw.servers.DEV-SRV1",
+		"nw.fw.endpoints.LT-01",
+		"nw.fw.endpoints.LT-02"
 	]
   },
   {
-    "name": "firesec.nw.fw.ports.SSH",
+    "name": "nw.fw.ports.SSH",
     "imports": [
-		"firesec.nw.fw.servers.PROD-SRV1",
-		"firesec.nw.fw.servers.PROD-SRV2",
-		"firesec.nw.fw.servers.PROD-SRV3",
-		"firesec.nw.fw.servers.TEST-SRV1",
-		"firesec.nw.fw.servers.TEST-SRV2",
-		"firesec.nw.fw.servers.DEV-SRV1",
-		"firesec.nw.fw.endpoints.LT-01",
-		"firesec.nw.fw.endpoints.LT-02"
+		"nw.fw.servers.PROD-SRV1",
+		"nw.fw.servers.PROD-SRV2",
+		"nw.fw.servers.PROD-SRV3",
+		"nw.fw.servers.TEST-SRV1",
+		"nw.fw.servers.TEST-SRV2",
+		"nw.fw.servers.DEV-SRV1",
+		"nw.fw.endpoints.LT-01",
+		"nw.fw.endpoints.LT-02"
 	]
   },
   {
-    "name": "firesec.nw.fw.ports.FTP",
+    "name": "nw.fw.ports.FTP",
     "imports": [
-		"firesec.nw.fw.servers.TEST-SRV1",
-		"firesec.nw.fw.servers.TEST-SRV2",
-		"firesec.nw.fw.servers.DEV-SRV1",
-		"firesec.nw.fw.endpoints.LT-01",
-		"firesec.nw.fw.endpoints.LT-02"
+		"nw.fw.servers.TEST-SRV1",
+		"nw.fw.servers.TEST-SRV2",
+		"nw.fw.servers.DEV-SRV1",
+		"nw.fw.endpoints.LT-01",
+		"nw.fw.endpoints.LT-02"
 	]
   },
   {
-    "name": "firesec.nw.fw.ports.SFTP",
+    "name": "nw.fw.ports.SFTP",
     "imports": [
-		"firesec.nw.fw.servers.TEST-SRV1",
-		"firesec.nw.fw.servers.TEST-SRV2",
-		"firesec.nw.fw.servers.DEV-SRV1",
-		"firesec.nw.fw.endpoints.LT-01",
-		"firesec.nw.fw.endpoints.LT-02"
+		"nw.fw.servers.TEST-SRV1",
+		"nw.fw.servers.TEST-SRV2",
+		"nw.fw.servers.DEV-SRV1",
+		"nw.fw.endpoints.LT-01",
+		"nw.fw.endpoints.LT-02"
 	]
   },
   {
-    "name": "firesec.nw.fw.ports.SMTP",
+    "name": "nw.fw.ports.SMTP",
     "imports": [
-		"firesec.nw.fw.servers.TEST-SRV1",
-		"firesec.nw.fw.servers.TEST-SRV2",
-		"firesec.nw.fw.servers.DEV-SRV1",
-		"firesec.nw.fw.endpoints.LT-01",
-		"firesec.nw.fw.endpoints.LT-02"
+		"nw.fw.servers.TEST-SRV1",
+		"nw.fw.servers.TEST-SRV2",
+		"nw.fw.servers.DEV-SRV1",
+		"nw.fw.endpoints.LT-01",
+		"nw.fw.endpoints.LT-02"
 	]
   },
   {
-    "name": "firesec.nw.fw.ports.TELNET",
+    "name": "nw.fw.ports.TELNET",
     "imports": [
-		"firesec.nw.fw.servers.TEST-SRV1",
-		"firesec.nw.fw.servers.TEST-SRV2",
-		"firesec.nw.fw.servers.DEV-SRV1",
-		"firesec.nw.fw.endpoints.LT-01",
-		"firesec.nw.fw.endpoints.LT-02"
+		"nw.fw.servers.TEST-SRV1",
+		"nw.fw.servers.TEST-SRV2",
+		"nw.fw.servers.DEV-SRV1",
+		"nw.fw.endpoints.LT-01",
+		"nw.fw.endpoints.LT-02"
 	]
   },
   {
-    "name": "firesec.nw.fw.ports.SNMP",
+    "name": "nw.fw.ports.SNMP",
     "imports": [
-		"firesec.nw.fw.servers.TEST-SRV1",
-		"firesec.nw.fw.servers.TEST-SRV2",
-		"firesec.nw.fw.servers.DEV-SRV1",
-		"firesec.nw.fw.endpoints.LT-01",
-		"firesec.nw.fw.endpoints.LT-02"
+		"nw.fw.servers.TEST-SRV1",
+		"nw.fw.servers.TEST-SRV2",
+		"nw.fw.servers.DEV-SRV1",
+		"nw.fw.endpoints.LT-01",
+		"nw.fw.endpoints.LT-02"
 	]
   },
   {
-    "name": "firesec.nw.fw.ports.NTP",
+    "name": "nw.fw.ports.NTP",
     "imports": [
-		"firesec.nw.fw.servers.TEST-SRV1",
-		"firesec.nw.fw.servers.TEST-SRV2",
-		"firesec.nw.fw.servers.DEV-SRV1",
-		"firesec.nw.fw.endpoints.LT-01",
-		"firesec.nw.fw.endpoints.LT-02"
+		"nw.fw.servers.TEST-SRV1",
+		"nw.fw.servers.TEST-SRV2",
+		"nw.fw.servers.DEV-SRV1",
+		"nw.fw.endpoints.LT-01",
+		"nw.fw.endpoints.LT-02"
 	]
   },
     {
-    "name": "firesec.swt.SWT-01",
+    "name": "swt.SWT-01",
     "imports": []
   },
   {
-    "name": "firesec.rtr.RTR-01",
+    "name": "rtr.RTR-01",
     "imports": []
   }
 ]
