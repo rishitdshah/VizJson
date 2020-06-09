@@ -1,0 +1,61 @@
+{
+  [
+    {name: "Compliance", 
+		children: [
+			{name: "PCI",  
+					children: [ 
+					{name: "Compliant", value: 12},
+					{name: "Non-Compliant", value: 13}
+					]
+			},
+			{name: "CIS",  
+					children: [ 
+					{name: "Compliant", value: 5},
+					{name: "Non-Compliant", value: 7}
+					]
+			}
+		]
+	},
+	{name: "Optimization Risks",
+		children: [
+			{name: "Unused Objects",	
+					children: [ 
+					{name: "Host", size: 5},
+					{name: "Host Group", size: 7},
+					{name: "Service", size: 5},
+					{name: "Service Group", size: 9}
+					]
+			},
+			{name: "Shadow", size: 10},
+			{name: "Redundant", size: 8},
+			{name: "Duplicate Objects",  
+					children: [ 
+					{name: "Host", size: 5},
+					{name: "Host Group", size: 7},
+					{name: "Service", size: 5},
+					{name: "Service Group", size: 9}
+					]
+			}
+		]
+	},
+	{name: "Network Security Risks", 
+		children: [
+			{name: "Overly Permissive", size: 10},
+			{name: "Any in Two Fields",
+					children: [
+					{ name: "Source Destination", size: "5" },
+					{ name: "Destination Service", size: "7" },
+					{ name: "Service Source", size: "8" },
+					] 
+			},
+			{ name: "Any in One Field",
+					children: [
+					{ name: "Source", size: "5" },
+					{ name: "Destination", size: "7" },
+					{ name: "Service", size: "8" },
+					] 
+			}
+		]		
+	}
+  ]
+}
