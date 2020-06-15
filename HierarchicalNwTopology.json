@@ -1,0 +1,312 @@
+[
+  {
+    "name": "nw.-NETWORK DEVICES-",
+    "imports": [
+      "nw.FIREWALL",
+      "nw.SWITCH",
+      "nw.ROUTER"
+    ]
+  },
+  {
+    "name": "nw.FIREWALL",
+    "imports": [
+      "fw.ORG-FW-01"
+    ]
+  },
+  {
+    "name": "nw.SWITCH",
+    "imports": [
+      "swt.ORG-SWT-01"
+    ]
+  },
+  {
+    "name": "nw.ROUTER",
+    "imports": [
+      "rtr.ORG-RTR-01"
+    ]
+  },
+  {
+    "name": "fw.ORG-FW-01",
+    "imports": [
+      "nw.fw.ORG-FW-01.INTERFACES",
+      "nw.fw.ORG-FW-01.ZONES",
+      "nw.fw.ORG-FW-01.SERVERS",
+      "nw.fw.ORG-FW-01.ENDPOINTS",
+      "nw.fw.ORG-FW-01.APPS",
+      "nw.fw.ORG-FW-01.PORTS"
+    ]
+  },
+  {
+    "name": "nw.fw.ORG-FW-01.INTERFACES",
+    "imports": [
+      "nw.fw.interfaces.GigabitEthernet0/0",
+      "nw.fw.interfaces.GigabitEthernet0/1",
+      "nw.fw.interfaces.GigabitEthernet0/2",
+      "nw.fw.interfaces.GigabitEthernet0/3",
+      "nw.fw.interfaces.GigabitEthernet0/4",
+      "nw.fw.interfaces.Management0/0"
+    ]
+  },
+  {
+    "name": "nw.fw.interfaces.GigabitEthernet0/0",
+    "imports": [
+		"nw.fw.zones.WAN"
+	]
+  },
+  {
+    "name": "nw.fw.interfaces.GigabitEthernet0/1",
+    "imports": [
+		"nw.fw.zones.DMZ"
+	]
+  },
+  {
+    "name": "nw.fw.interfaces.GigabitEthernet0/2",
+    "imports": [
+		"nw.fw.zones.EXTERNAL"
+	]
+  },
+  {
+    "name": "nw.fw.interfaces.GigabitEthernet0/3",
+    "imports": [
+		"nw.fw.zones.LAN"
+	]
+  },
+  {
+    "name": "nw.fw.interfaces.GigabitEthernet0/4",
+    "imports": []
+  },
+  {
+    "name": "nw.fw.interfaces.Management0/0",
+    "imports": [
+		"nw.fw.zones.INTERNAL"
+	]
+  },
+  {
+    "name": "nw.fw.ORG-FW-01.ZONES",
+    "imports": [
+      "nw.fw.zones.DMZ",
+      "nw.fw.zones.WAN",
+      "nw.fw.zones.LAN",
+      "nw.fw.zones.INTERNAL",
+      "nw.fw.zones.EXTERNAL"
+    ]
+  },
+  {
+    "name": "nw.fw.zones.DMZ",
+    "imports": [
+	    "nw.fw.servers.PROD-SRV1",
+		"nw.fw.servers.PROD-SRV2",
+		"nw.fw.servers.PROD-SRV3",
+		"nw.fw.zones.WAN"
+	]
+  },
+  {
+    "name": "nw.fw.zones.WAN",
+    "imports": [
+		"nw.fw.zones.LAN"
+		]
+  },
+  {
+    "name": "nw.fw.zones.LAN",
+    "imports": [
+		"nw.fw.servers.DEV-SRV1",
+		"nw.fw.endpoints.ORG-LT-01",
+		"nw.fw.endpoints.ORG-LT-02",
+		"nw.fw.zones.DMZ"
+	]
+  },
+  {
+    "name": "nw.fw.zones.INTERNAL",
+    "imports": [
+		"nw.fw.servers.TEST-SRV1",
+		"nw.fw.servers.TEST-SRV2"
+	]
+  },
+  {
+    "name": "nw.fw.zones.EXTERNAL",
+    "imports": []
+  },
+  {
+    "name": "nw.fw.ORG-FW-01.SERVERS",
+    "imports": [
+      "nw.fw.servers.PROD-SRV1",
+      "nw.fw.servers.PROD-SRV2",
+      "nw.fw.servers.PROD-SRV3",
+      "nw.fw.servers.TEST-SRV1",
+      "nw.fw.servers.TEST-SRV2",
+      "nw.fw.servers.DEV-SRV1"
+    ]
+  },
+  {
+    "name": "nw.fw.servers.PROD-SRV1",
+    "imports": []
+  },
+  {
+    "name": "nw.fw.servers.PROD-SRV2",
+    "imports": []
+  },
+  {
+    "name": "nw.fw.servers.PROD-SRV3",
+    "imports": []
+  },
+  {
+    "name": "nw.fw.servers.TEST-SRV1",
+    "imports": []
+  },
+  {
+    "name": "nw.fw.servers.TEST-SRV2",
+    "imports": []
+  },
+  {
+    "name": "nw.fw.servers.DEV-SRV1",
+    "imports": []
+  },
+  {
+    "name": "nw.fw.ORG-FW-01.ENDPOINTS",
+    "imports": [
+      "nw.fw.endpoints.ORG-LT-01",
+      "nw.fw.endpoints.ORG-LT-02"
+    ]
+  },
+  {
+    "name": "nw.fw.endpoints.ORG-LT-01",
+    "imports": []
+  },
+  {
+    "name": "nw.fw.endpoints.ORG-LT-02",
+    "imports": []
+  },
+  {
+    "name": "nw.fw.ORG-FW-01.APPS",
+    "imports": [
+      "nw.fw.apps.fb",
+      "nw.fw.apps.google"
+    ]
+  },
+  {
+    "name": "nw.fw.apps.fb",
+    "imports": []
+  },
+  {
+    "name": "nw.fw.apps.google",
+    "imports": []
+  },
+  {
+    "name": "nw.fw.ORG-FW-01.PORTS",
+    "imports": [
+      "nw.fw.ports.HTTP",
+      "nw.fw.ports.HTTPS",
+      "nw.fw.ports.SSH",
+	  "nw.fw.ports.FTP",
+	  "nw.fw.ports.SFTP",
+	  "nw.fw.ports.SMTP",
+	  "nw.fw.ports.TELNET",
+	  "nw.fw.ports.SNMP",
+	  "nw.fw.ports.NTP"
+    ]
+  },
+  {
+    "name": "nw.fw.ports.HTTP",
+    "imports": [
+		"nw.fw.servers.TEST-SRV1",
+		"nw.fw.servers.TEST-SRV2",
+		"nw.fw.servers.DEV-SRV1",
+		"nw.fw.endpoints.ORG-LT-01",
+		"nw.fw.endpoints.ORG-LT-02"
+	]
+  },
+  {
+    "name": "nw.fw.ports.HTTPS",
+    "imports": [
+		"nw.fw.servers.PROD-SRV1",
+		"nw.fw.servers.PROD-SRV2",
+		"nw.fw.servers.PROD-SRV3",
+		"nw.fw.servers.TEST-SRV1",
+		"nw.fw.servers.TEST-SRV2",
+		"nw.fw.servers.DEV-SRV1",
+		"nw.fw.endpoints.ORG-LT-01",
+		"nw.fw.endpoints.ORG-LT-02"
+	]
+  },
+  {
+    "name": "nw.fw.ports.SSH",
+    "imports": [
+		"nw.fw.servers.PROD-SRV1",
+		"nw.fw.servers.PROD-SRV2",
+		"nw.fw.servers.PROD-SRV3",
+		"nw.fw.servers.TEST-SRV1",
+		"nw.fw.servers.TEST-SRV2",
+		"nw.fw.servers.DEV-SRV1",
+		"nw.fw.endpoints.ORG-LT-01",
+		"nw.fw.endpoints.ORG-LT-02"
+	]
+  },
+  {
+    "name": "nw.fw.ports.FTP",
+    "imports": [
+		"nw.fw.servers.TEST-SRV1",
+		"nw.fw.servers.TEST-SRV2",
+		"nw.fw.servers.DEV-SRV1",
+		"nw.fw.endpoints.ORG-LT-01",
+		"nw.fw.endpoints.ORG-LT-02"
+	]
+  },
+  {
+    "name": "nw.fw.ports.SFTP",
+    "imports": [
+		"nw.fw.servers.TEST-SRV1",
+		"nw.fw.servers.TEST-SRV2",
+		"nw.fw.servers.DEV-SRV1",
+		"nw.fw.endpoints.ORG-LT-01",
+		"nw.fw.endpoints.ORG-LT-02"
+	]
+  },
+  {
+    "name": "nw.fw.ports.SMTP",
+    "imports": [
+		"nw.fw.servers.TEST-SRV1",
+		"nw.fw.servers.TEST-SRV2",
+		"nw.fw.servers.DEV-SRV1",
+		"nw.fw.endpoints.ORG-LT-01",
+		"nw.fw.endpoints.ORG-LT-02"
+	]
+  },
+  {
+    "name": "nw.fw.ports.TELNET",
+    "imports": [
+		"nw.fw.servers.TEST-SRV1",
+		"nw.fw.servers.TEST-SRV2",
+		"nw.fw.servers.DEV-SRV1",
+		"nw.fw.endpoints.ORG-LT-01",
+		"nw.fw.endpoints.ORG-LT-02"
+	]
+  },
+  {
+    "name": "nw.fw.ports.SNMP",
+    "imports": [
+		"nw.fw.servers.TEST-SRV1",
+		"nw.fw.servers.TEST-SRV2",
+		"nw.fw.servers.DEV-SRV1",
+		"nw.fw.endpoints.ORG-LT-01",
+		"nw.fw.endpoints.ORG-LT-02"
+	]
+  },
+  {
+    "name": "nw.fw.ports.NTP",
+    "imports": [
+		"nw.fw.servers.TEST-SRV1",
+		"nw.fw.servers.TEST-SRV2",
+		"nw.fw.servers.DEV-SRV1",
+		"nw.fw.endpoints.ORG-LT-01",
+		"nw.fw.endpoints.ORG-LT-02"
+	]
+  },
+    {
+    "name": "swt.ORG-SWT-01",
+    "imports": []
+  },
+  {
+    "name": "rtr.ORG-RTR-01",
+    "imports": []
+  }
+]
