@@ -1,144 +1,152 @@
-	{
-        "name": "Analysis",
-        "children": [{
-                "name": "Security Analysis",
-                "children": [{
-                        "name": "Overly Permissive",
-                        "value": 10
-                    },
-                    {
-                        "name": "Any Two Fields",
-                        "children": [{
-                                "name": "SRC DSTN",
-                                "value": 10
-                            },
-                            {
-                                "name": "DTSN SRV",
-                                "value": 20
-                            },
-                            {
-                                "name": "SRV SRC",
-                                "value": 10
-                            }
-                        ]
-                    },
-                    {
-                        "name": "Any One Field",
-                        "children": [{
-                                "name": "Source",
-                                "value": 10
-                            },
-                            {
-                                "name": "Destination",
-                                "value": 20
-                            },
-                            {
-                                "name": "Service",
-                                "value": 30
-                            }
-                        ]
-                    },
-                    {
-                        "name": "Drop Rules Logging Disabled",
-                        "value": 20
-                    }
-                ]
+{
+  "name": "Analysis",
+  "children": [
+    {
+      "name": "Security Analysis",
+      "children": [
+        {
+          "name": "Overly Permissive",
+          "size": 10
+        },
+        {
+          "name": "Any Two Fields",
+          "children": [
+            {
+              "name": "SRC DSTN",
+              "size": 10
             },
             {
-                "name": "Optimization",
-                "children": [{
-                        "name": "Shadow",
-                        "value": 10
-                    },
-                    {
-                        "name": "Redundant",
-                        "value": 10
-                    },
-                    {
-                        "name": "Unused Objects",
-                        "children": [{
-                                "name": "Host",
-                                "value": 10
-                            },
-                            {
-                                "name": "Host Group",
-                                "value": 10
-                            },
-                            {
-                                "name": "Service",
-                                "value": 20
-                            },
-                            {
-                                "name": "Service Group",
-                                "value": 20
-                            },
-                            {
-                                "name": "Interfaces",
-                                "value": 30
-                            },
-                            {
-                                "name": "Zones",
-                                "value": 30
-                            }
-                        ]
-                    },
-                    {
-                        "name": "Duplicate Objects",
-                        "children": [{
-                                "name": "Host",
-                                "value": 10
-                            },
-                            {
-                                "name": "Host Group",
-                                "value": 10
-                            },
-                            {
-                                "name": "Service",
-                                "value": 10
-                            },
-                            {
-                                "name": "Service Group",
-                                "value": 10
-                            },
-                            {
-                                "name": "Interfaces",
-                                "value": 20
-                            },
-                            {
-                                "name": "Zones",
-                                "value": 30
-                            }
-                        ]
-                    },
-                    {
-                        "name": "Disabled Rules",
-                        "value": 30
-                    }
-                ]
+              "name": "DTSN SRV",
+              "size": 20
             },
             {
-                "name": "Compliance",
-                "children": [{
-                        "name": "CIS Benchmark",
-                        "value": 20
-                    },
-                    {
-                        "name": "PCI DSS",
-                        "value": 30
-                    },
-                    {
-                        "name": "NIST",
-                        "value": 10
-                    },
-                    {
-                        "name": "HIPPA",
-                        "value": 10
-                    },
-                    {
-                        "name": "SOX",
-                        "value": 10
-                    }
-                ]
+              "name": "SRV SRC",
+              "size": 10
             }
-        ]
-    };
+          ]
+        },
+        {
+          "name": "Any One Field",
+          "children": [
+            {
+              "name": "Source",
+              "size": 10
+            },
+            {
+              "name": "Destination",
+              "size": 20
+            },
+            {
+              "name": "Service",
+              "size": 30
+            }
+          ]
+        },
+        {
+          "name": "Drop Rules Logging Disabled",
+          "size": 20
+        }
+      ]
+    },
+    {
+      "name": "Optimization",
+      "children": [
+        {
+          "name": "Shadow",
+          "size": 10
+        },
+        {
+          "name": "Redundant",
+          "size": 10
+        },
+        {
+          "name": "Unused Objects",
+          "children": [
+            {
+              "name": "Host",
+              "size": 10
+            },
+            {
+              "name": "Host Group",
+              "size": 10
+            },
+            {
+              "name": "Service",
+              "size": 20
+            },
+            {
+              "name": "Service Group",
+              "size": 20
+            },
+            {
+              "name": "Interfaces",
+              "size": 30
+            },
+            {
+              "name": "Zones",
+              "size": 30
+            }
+          ]
+        },
+        {
+          "name": "Duplicate Objects",
+          "children": [
+            {
+              "name": "Host",
+              "size": 10
+            },
+            {
+              "name": "Host Group",
+              "size": 10
+            },
+            {
+              "name": "Service",
+              "size": 10
+            },
+            {
+              "name": "Service Group",
+              "size": 10
+            },
+            {
+              "name": "Interfaces",
+              "size": 20
+            },
+            {
+              "name": "Zones",
+              "size": 30
+            }
+          ]
+        },
+        {
+          "name": "Disabled Rules",
+          "size": 30
+        }
+      ]
+    },
+    {
+      "name": "Compliance",
+      "children": [
+        {
+          "name": "CIS Benchmark",
+          "size": 20
+        },
+        {
+          "name": "PCI DSS",
+          "size": 30
+        },
+        {
+          "name": "NIST",
+          "size": 10
+        },
+        {
+          "name": "HIPPA",
+          "size": 10
+        },
+        {
+          "name": "SOX",
+          "size": 10
+        }
+      ]
+    }
+  ]
+}
